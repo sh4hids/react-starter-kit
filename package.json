@@ -1,0 +1,73 @@
+{
+  "name": "react-starter-kit",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Shahidul Islam Majumder",
+    "email": "hello@shahid.pro",
+    "url": "https://shahid.pro"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
+    "@styled-icons/fa-brands": "^10.38.0",
+    "@styled-icons/feather": "^10.34.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.21.4",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.1",
+    "query-string": "^4.3.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.1",
+    "styled-system": "^5.1.5",
+    "url-join": "^4.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "lint": "eslint --ignore-path .gitignore --ext .js",
+    "validate": "npm-run-all --parallel check-format lint",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "prop-types": "^15.7.2"
+  }
+}
