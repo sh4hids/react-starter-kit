@@ -1,1 +1,0 @@
-# tmdb-react-app
