@@ -1,23 +1,16 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 
-import theme from '../styles/theme';
-import GlobalStyle from '../styles/GlobalStyles';
 import { Header, Container, SEO } from '../components';
 
 const DefaultLayout = ({ children, title, description, url, image }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
+  <>
     <SEO title={title} description={description} url={url} image={image} />
-    <Header
-    // colorMode={context.colorMode}
-    // setColorMode={context.setColorMode}
-    />
+    <Header />
     <Container p={3} pt={76}>
       {children}
     </Container>
-  </ThemeProvider>
+  </>
 );
 
 DefaultLayout.defaultProps = {

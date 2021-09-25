@@ -88,7 +88,7 @@ const HeaderMenu = ({ isMenuOpen }) => (
       </NavLink>
     </li>
     <li>
-      <NavLink to="/movies/latest" activeClassName="active" partiallyActive>
+      <NavLink to="/movies/latest" activeClassName="active">
         Latest
       </NavLink>
     </li>

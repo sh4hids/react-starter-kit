@@ -1,36 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  :root {
-    --color-primary-0: #207490;
-    --color-primary-1: #21AAE2;
-    --color-primary-2: #5CC7EB;
-    --color-dark-0: #191924;
-    --color-dark-1: #27283F;
-    --color-dark-2: #53556E;
-    --color-light-0: #EDEDF2;
-    --color-light-1: #F6F6F9;
-    --color-light-2: #FFFFFF;
-    --color-success-0: #04A660;
-    --color-success-1: #07C270;
-    --color-success-2: #3ADA8A;
-    --color-error-0: #BE1918;
-    --color-error-1: #F43A3C;
-    --color-error-2: #F56161;
-    --color-warning-0: #E27A00;
-    --color-warning-1: #FF8E00;
-    --color-warning-2: #FDA642;
-    --color-bg-0: #EDEDF2;
-    --color-bg-1: #F6F6F9;
-    --color-bg-2: #FFFFFF;
-    --color-text-0: #191924;
-    --color-text-1: #27283F;
-    --color-text-2: #53556E;
-    --color-accent-2: #5CC7EB;
-    --color-accent-1: #21AAE2;
-    --color-accent-0: #207490;
-  }
-
   * {
     margin: 0;
     padding: 0;

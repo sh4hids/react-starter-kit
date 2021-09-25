@@ -5,7 +5,7 @@ import { DefaultLayout } from '../layouts';
 
 export default function HomePage() {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Home">
       <Text variant="h1">This is home page</Text>
     </DefaultLayout>
   );

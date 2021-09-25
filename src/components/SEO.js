@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import urljoin from 'url-join';
 import PropTypes from 'prop-types';
 
@@ -40,47 +40,49 @@ const SEO = ({
   });
 
   return (
-    <Helmet htmlAttributes={{ lang: 'en' }}>
-      {/* General tags */}
-      <title>{`${seoTitle}`}</title>
-      <meta name="description" content={metaDescription} />
-      <meta
-        name="image"
-        content={seoImage ? urljoin(siteMetadata.siteUrl, seoImage) : ''}
-      />
+    <HelmetProvider>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
+        {/* General tags */}
+        <title>{`${seoTitle}`}</title>
+        <meta name="description" content={metaDescription} />
+        <meta
+          name="image"
+          content={seoImage ? urljoin(siteMetadata.siteUrl, seoImage) : ''}
+        />
 
-      {/* Schema.org tags */}
-      <script type="application/ld+json">
-        {JSON.stringify(schemaOrgJSONLD)}
-      </script>
+        {/* Schema.org tags */}
+        <script type="application/ld+json">
+          {JSON.stringify(schemaOrgJSONLD)}
+        </script>
 
-      {/* OpenGraph tags */}
-      <meta property="og:url" content={`${canonicalUrl}`} />
-      {pageType === 'Article' ? (
-        <meta property="og:type" content="article" />
-      ) : null}
-      <meta property="og:title" content={seoTitle} />
-      <meta property="og:description" content={metaDescription} />
-      <meta
-        property="og:image"
-        content={seoImage ? urljoin(siteMetadata.siteUrl, seoImage) : ''}
-      />
-      {keywords && <meta name="keywords" content={keywords.join(', ')} />}
-      <meta property="fb:app_id" content={siteMetadata.fbAppId || ''} />
+        {/* OpenGraph tags */}
+        <meta property="og:url" content={`${canonicalUrl}`} />
+        {pageType === 'Article' ? (
+          <meta property="og:type" content="article" />
+        ) : null}
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta
+          property="og:image"
+          content={seoImage ? urljoin(siteMetadata.siteUrl, seoImage) : ''}
+        />
+        {keywords && <meta name="keywords" content={keywords.join(', ')} />}
+        <meta property="fb:app_id" content={siteMetadata.fbAppId || ''} />
 
-      {/* Twitter Card tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:creator"
-        content={siteMetadata.author ? siteMetadata.author.links.twitter : ''}
-      />
-      <meta name="twitter:title" content={seoTitle} />
-      <meta name="twitter:description" content={metaDescription} />
-      <meta
-        name="twitter:image"
-        content={seoImage ? urljoin(siteMetadata.siteUrl, seoImage) : ''}
-      />
-    </Helmet>
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:creator"
+          content={siteMetadata.author ? siteMetadata.author.links.twitter : ''}
+        />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta
+          name="twitter:image"
+          content={seoImage ? urljoin(siteMetadata.siteUrl, seoImage) : ''}
+        />
+      </Helmet>
+    </HelmetProvider>
   );
 };
 
